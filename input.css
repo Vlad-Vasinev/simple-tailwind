@@ -1,6 +1,44 @@
+
+
 @import "tailwindcss";
 @plugin "./mixin.js";
 @plugin "@theunwindfront/tailwindcss-fluid-scale";
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/static/Inter_24pt-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/static/Inter_24pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/static/Inter_24pt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/static/Inter_24pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+}
 
 .text-fluid-3xl {
   font-size: clamp(16px, 1.5vw, 40px);
@@ -11,6 +49,31 @@
 .text-fluid-5xl {
   font-size: clamp(12px, 2.5vw, 20px);
   color: #ffffff;
+}
+
+@media(max-width: 770px) {
+  .mirror-block {
+    flex-direction: column;
+  }
+
+  .mirror-block:nth-child(2) .mirror-block__el:nth-child(1){
+   order: 2;
+   margin-top: 40px;
+  }
+
+  .mirror-block__el {
+    width: 100%;
+    justify-content: unset;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mirror-block__el img{ 
+    height: 75vh;
+    object-fit: cover;
+  }
+  .mirror-block__el .list-disc {
+    padding-left: 20px;
+  }
 }
 
 /*
