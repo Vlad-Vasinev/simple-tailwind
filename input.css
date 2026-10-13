@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@plugin "./mixin.js";
+@plugin "@theunwindfront/tailwindcss-fluid-scale";
+
+.text-fluid-3xl {
+  font-size: clamp(16px, 1.5vw, 40px);
+}
+.text-fluid-4xl {
+  font-size: clamp(16px, 2.5vw, 50px);
+}
+.text-fluid-5xl {
+  font-size: clamp(12px, 2.5vw, 20px);
+  color: #ffffff;
+}
+
+/*
+Regular
+Medium
+SemiBold
+Bold
+
+Segoe Script
+*/
+
+/* w-[clamp(25px,2.6vw,50px)]
+h-[clamp(25px,2.6vw,50px)] */
